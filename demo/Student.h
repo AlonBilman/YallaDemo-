@@ -20,7 +20,7 @@ public:
 	~Student(); //מפרק
 
 	//copy ctor 
-	//Student(const Student& other);
+	Student(const Student& other);
 
 	// methods
 	double getAverage() const;

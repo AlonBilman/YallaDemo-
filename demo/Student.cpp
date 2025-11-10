@@ -62,9 +62,10 @@ Student::~Student()
 	//המטרה היא אבטחת מידע
 	_grades = nullptr;
 }
-/*
+
 Student::Student(const Student& other)
 {
+	std::cout << "Hey!!! Someone copied me!!!" << std::endl;
 	// shallow copy fields
 	this->_id = other._id;
 	this->_firstName = other._firstName;
@@ -78,7 +79,7 @@ Student::Student(const Student& other)
 		this->_grades[i] = other._grades[i];
 	}
 }
-*/
+
 
 
 string Student::getGradeString(const int gradeIndex) const
