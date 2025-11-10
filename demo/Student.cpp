@@ -42,7 +42,7 @@ void Student::print() const
 
 Student::Student(const int id, const std::string firstName, const std::string lastName)
 {
-	std::cout << "CTOR!" << std::endl;
+	//std::cout << "CTOR!" << std::endl;
 	this->_id = id;
 	this->_firstName = firstName;
 	this->_lastName = lastName;
@@ -56,12 +56,30 @@ Student::Student(const int id, const std::string firstName, const std::string la
 
 Student::~Student()
 {
-	std::cout << "DTOR!" << std::endl;
+	//std::cout << "DTOR!" << std::endl;
 	delete[] _grades;
 	//אחרי שחרור זיכרון אני חייב לתת השמה
 	//המטרה היא אבטחת מידע
 	_grades = nullptr;
 }
+/*
+Student::Student(const Student& other)
+{
+	// shallow copy fields
+	this->_id = other._id;
+	this->_firstName = other._firstName;
+	this->_lastName = other._lastName;
+	// deep copy dynamic fields (pointers/arrays)
+
+	this->_grades = new unsigned int[NUM_OF_GRADES];
+	for (int i = 0; i < NUM_OF_GRADES; i++)
+	{
+		// copies cell by cell
+		this->_grades[i] = other._grades[i];
+	}
+}
+*/
+
 
 string Student::getGradeString(const int gradeIndex) const
 {

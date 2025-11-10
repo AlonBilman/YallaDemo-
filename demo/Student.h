@@ -19,6 +19,8 @@ public:
 	Student(const int id, const std::string firstName, const std::string lastName);
 	~Student(); //מפרק
 
+	//copy ctor 
+	Student(const Student& other);
 
 	// methods
 	double getAverage() const;
