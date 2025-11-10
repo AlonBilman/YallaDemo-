@@ -40,12 +40,13 @@ void Student::print() const
 
 //רגע מה שיניתי פה?...
 
-Student::Student(const int id, const std::string firstName, const std::string lastName)
+Student::Student(const int id, const string firstName, const string lastName) :
+	_id(id), _firstName(firstName), _lastName(lastName)
 {
 	//std::cout << "CTOR!" << std::endl;
-	this->_id = id;
-	this->_firstName = firstName;
-	this->_lastName = lastName;
+	//this->_id = id;
+	//this->_firstName = firstName;
+	//this->_lastName = lastName;
 	// allocates memory and assigns empty grades
 	this->_grades = new unsigned int[NUM_OF_GRADES];
 	for (int i = 0; i < NUM_OF_GRADES; i++)
