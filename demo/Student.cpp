@@ -38,13 +38,11 @@ void Student::print() const
 }
 //new!
 
-//יש פה בעיונת.. מי עולה על זה?
-/*
-אין בדיקת קלט
-מי אמר שהערכים בין 0 ל 100
-*/
-void Student::init(const int id, const std::string firstName, const std::string lastName)
+//רגע מה שיניתי פה?...
+
+Student::Student(const int id, const std::string firstName, const std::string lastName)
 {
+	std::cout << "CTOR!" << std::endl;
 	this->_id = id;
 	this->_firstName = firstName;
 	this->_lastName = lastName;
@@ -56,8 +54,9 @@ void Student::init(const int id, const std::string firstName, const std::string 
 	}
 }
 
-void Student::clean()
+Student::~Student()
 {
+	std::cout << "DTOR!" << std::endl;
 	delete[] _grades;
 	//אחרי שחרור זיכרון אני חייב לתת השמה
 	//המטרה היא אבטחת מידע

@@ -14,13 +14,15 @@
 class Student
 {
 public:
+	//הבנאי פה באבליק, למה?
+
+	Student(const int id, const std::string firstName, const std::string lastName);
+	~Student(); //מפרק
+
+
 	// methods
 	double getAverage() const;
 	void print() const;
-	//new methods!
-	void init(const int id, const std::string firstName, const std::string lastName); //why not const?
-
-	void clean();
 
 	// getters
 	int getId() const;
