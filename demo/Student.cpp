@@ -36,6 +36,33 @@ void Student::print() const
 		<< "English: " << this->getGradeString(ENGLISH_GRADE_IDX) << endl;
 
 }
+//new!
+
+//יש פה בעיונת.. מי עולה על זה?
+/*
+אין בדיקת קלט
+מי אמר שהערכים בין 0 ל 100
+*/
+void Student::init(const int id, const std::string firstName, const std::string lastName)
+{
+	this->_id = id;
+	this->_firstName = firstName;
+	this->_lastName = lastName;
+	// allocates memory and assigns empty grades
+	this->_grades = new unsigned int[NUM_OF_GRADES];
+	for (int i = 0; i < NUM_OF_GRADES; i++)
+	{
+		this->_grades[i] = EMPTY_GRADE;
+	}
+}
+
+void Student::clean()
+{
+	delete[] _grades;
+	//אחרי שחרור זיכרון אני חייב לתת השמה
+	//המטרה היא אבטחת מידע
+	_grades = nullptr;
+}
 
 string Student::getGradeString(const int gradeIndex) const
 {
@@ -102,3 +129,4 @@ void Student::setGrade(const int grade_idx, const unsigned int new_grade)
 	}
 
 }
+

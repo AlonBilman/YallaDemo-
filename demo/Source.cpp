@@ -8,21 +8,15 @@ int main()
 {
 	Student stud1;
 
-	// first student info
-	stud1.setFirstName("Shahar");
-	stud1.setLastName("Hasson");
-	stud1.setId(123456789);
+	// init first student info
+	stud1.init(123456789, "Shahar", "Hasson");
 	stud1.setGrade(HISTORY_GRADE_IDX, 78);
 	stud1.setGrade(MATH_GRADE_IDX, 81);
 	stud1.setGrade(LITERATURE_GRADE_IDX, 90);
 	stud1.setGrade(ENGLISH_GRADE_IDX, 65);
-
 	Student stud2;
-
-	// second student info
-	stud2.setFirstName("Beyonce");
-	stud2.setLastName("");
-	stud2.setId(111111111);
+	// init second student info
+	stud2.init(111111111, "Beyonce", "");
 	stud2.setGrade(HISTORY_GRADE_IDX, 95);
 	stud2.setGrade(MATH_GRADE_IDX, 87);
 	stud2.setGrade(LITERATURE_GRADE_IDX, 90);
@@ -34,5 +28,18 @@ int main()
 
 	system("pause");
 	return 0;
+	//השאלה שעולה פה היא האם זה מועיל?
+	//דבר ראשון, כן זה נראה הרבה יותר מסודר 
+	//אבל מה קורה אם מישהו לא קורא לפונקציית האיתחול?
+	//unexpected behavior
+
+
+
+	//שחכתי פה עוד משהו.... 
+	/*לשחרר זיכרון!!
+	*/
+
+
+	//חוזרים למצגת! בנאים ומפרקים!
 
 }

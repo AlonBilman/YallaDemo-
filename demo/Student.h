@@ -17,6 +17,10 @@ public:
 	// methods
 	double getAverage() const;
 	void print() const;
+	//new methods!
+	void init(const int id, const std::string firstName, const std::string lastName); //why not const?
+
+	void clean();
 
 	// getters
 	int getId() const;
@@ -30,13 +34,14 @@ public:
 	void setFirstName(const std::string newFirstName);
 	void setLastName(const std::string newLastName);
 	void setGrade(const int grade_idx, const unsigned int new_grade);
+	
 
 private:
 	// fields
 	int _id;
 	std::string _firstName;
 	std::string _lastName;
-	unsigned int _grades[NUM_OF_GRADES];
+	unsigned int* _grades;
 
 	//methods
 	std::string getGradeString(const int gradeIndex) const;	// helper method
